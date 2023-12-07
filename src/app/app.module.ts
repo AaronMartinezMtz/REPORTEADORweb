@@ -14,7 +14,7 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { CalendarModule } from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
 import { ChartModule } from 'primeng/chart';
-
+import { Chart } from 'chart.js';
 
 @NgModule({
   declarations: [

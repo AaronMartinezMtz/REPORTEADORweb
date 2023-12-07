@@ -10,3 +10,12 @@ export interface APIBusqueda {
     precio: string,
     fecha: string
 }
+
+export interface APITotal {
+    arandano: number,
+    habanero: number,
+    cacahuate: number,
+    ajonjoli: number,
+    arbol: number,
+    total: number
+}

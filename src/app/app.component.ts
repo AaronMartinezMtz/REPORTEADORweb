@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ServiceGeneralService } from 'src/services/service-general.service';
 import { APIBusqueda, Busqueda } from './interfaces/busqueda.interface';
 import { SortEvent } from 'primeng/api';
+import { Chart } from 'chart.js';
+
 
 @Component({
   selector: 'app-root',
@@ -27,6 +29,7 @@ export class AppComponent implements OnInit{
     habanero=0
     arbol=0
     ajonjoli=0
+    total=0
 
     busquedaTest: Busqueda = {nombre:"habanero"}
 
@@ -34,7 +37,7 @@ export class AppComponent implements OnInit{
 
     ngOnInit() {
 
-
+        this.getallSalsas()
         // this.getall()
 
         this.serviceGeneralService.obtenerTodos().subscribe(
@@ -146,9 +149,20 @@ export class AppComponent implements OnInit{
 
     }
 
-    getall(){
+    getallSalsas(){
 
-      
+      this.serviceGeneralService.obtenerResultadosGenerales().subscribe(
+        resp => {
+
+          this.arandano= resp.arandano
+          this.cacahuate= resp.cacahuate
+          this.habanero= resp.habanero
+          this.arbol= resp.arbol
+          this.ajonjoli= resp.ajonjoli
+          this.total = resp.total
+
+        }
+      )
 
     }
 

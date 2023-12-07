@@ -1,0 +1,34 @@
+.bg-danger{
+    background-color: #EF4444;
+    color: #FFFFFF;
+    font-family: "Open Sans", sans-serif;
+}
+.bg-warning{
+    background-color: #F87315;
+    color: #FFFFFF;
+    font-family: "Open Sans", sans-serif;
+
+}
+.bg-success{
+    background-color: #21C55D;
+    color: #FFFFFF;
+    font-family: "Open Sans", sans-serif;
+
+}
+.bg-secondary{
+    background-color: #64748B;
+    color: #FFFFFF;
+    font-family: "Open Sans", sans-serif;
+}
+
+.bg-primary{
+    background-color: #3B81F6;
+    color: #FFFFFF;
+    font-family: "Open Sans", sans-serif;
+}
+
+.newFont{
+    font-family: "Open Sans", sans-serif;
+
+
+}

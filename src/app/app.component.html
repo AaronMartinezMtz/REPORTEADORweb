@@ -9,26 +9,37 @@
   </div>
 </p-toolbar>
 
+
+<div class="flex pt-5">
+    <div class="flex-1 h-4rem bg-primary font-bold text-center p-4 border-round">habanero {{habanero}}/{{total}}</div>
+    <div class="flex-1 h-4rem bg-secondary font-bold text-center p-4 border-round mx-4">arbol {{arbol}}/{{total}}</div>
+    <div class="flex-1 h-4rem bg-success font-bold text-center p-4 border-round mx-4">ajonjoli {{ajonjoli}}/{{total}}</div>
+    <div class="flex-1 h-4rem bg-warning font-bold text-center p-4 border-round mx-4">cacahuate {{cacahuate}}/{{total}}</div>
+    <div class="flex-1 h-4rem bg-danger font-bold text-center p-4 border-round mx-4">arandano {{arandano}}/{{total}}</div>
+    <div class="flex-1 h-4rem bg-primary font-bold text-center p-4 border-round">total: {{total}}</div>
+</div>
+
+
 <div class="formgrid grid mt-5 mb-5">
   <div class="field col">
-      <label for="firstname2">Nombre</label>
+      <label for="firstname2" class="newFont">Nombre</label>
       <input [(ngModel)]="nombre" id="nombre" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
 
     </div>
 
   <div class="field col">
-      <label for="precio">Precio</label>
+      <label for="precio" class="newFont">Precio</label>
       <input [(ngModel)]="precio" id="precio" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
   </div>
 
-  <div class="field col">
+  <div class="field col" class="newFont">
     <label for="fecha">fecha</label>
     <input [(ngModel)]="fecha" id="fecha" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
 </div>
 
 </div>
 
-<div class="container">
+<div class="container mb-5">
   <div class="card">
       <p-table [value]="products" (sortFunction)="customSort($event)" [customSort]="true" [tableStyle]="{'min-width': '60rem'}">
           <ng-template pTemplate="header">
